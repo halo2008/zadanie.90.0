@@ -1,0 +1,28 @@
+/* Colors */
+$main-color: #ffffff;
+$paragraph-alternative-color: #000000;
+$paragraph-color: #333333;
+$brand-main-color: #ff0000;
+$button-color: #f5f5f2;
+$button-orange-active: #ffa200;
+$button-orange-inactive: #f58220;
+$button-grey-active: #bababa;
+$disabled-buton: #e3e3e3;
+$button-grey-inactive: #979797;
+$notification-negative-active: #de5252;
+$notification-negative-inactive: #ec7171;
+$notification-positive-active: #74B67A;
+$notification-positive-inactiv: #96CC9B;
+$links: #56819f;
+$marks: #04ae00;
+
+
+/* Font sizes */
+$paragraph-font-size: 16px;
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+$brand-font: "Open Sans", Helvetica, Arial;
+$paragraph-font: "Open Sans", Helvetica, Arial;
+$page-header-font: 'Roboto', sans-serif;
