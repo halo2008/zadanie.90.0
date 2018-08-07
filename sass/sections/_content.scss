@@ -1,0 +1,14 @@
+.content {
+	background-color: #f5f5f5;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    margin: 46px 0 0 190px;
+    min-height: calc(100vh - 46px);
+    transition: all .5s;
+}
+
+.general {
+		padding: 50px 0 0;
+
+}

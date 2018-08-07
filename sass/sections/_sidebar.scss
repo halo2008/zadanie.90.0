@@ -1,32 +1,37 @@
 .sidebar {
 	margin: 0 auto;
-	background-color: $paragraph-alternative-color;
-	width: 200px;
+	background-color: $paragraph-alternative-color;	
+	width: 100%;
 	position: fixed;
 	height: 100vh;
-	transition: all 1.5s ease-out;	
+	transition: all .7s ease-out;
+	
 }
 
 .logo {
-	padding: 5px;
+	padding: 0px;	
 
 	img {
-		padding: 20px;		
+		padding: 10px;
 	}
 }
 
+a {
+	text-decoration: none;
+}
+
 ul {
-	padding: 0;	
+	padding: 0;			
 	
-	li {		
+	.sidebar-menu {		
 		list-style-type: none;		
 		padding: 15px;
-		border-left: 3px solid $paragraph-alternative-color;		
+		border-left: 3px solid $paragraph-alternative-color;
+		display: flex;
+		justify-content: start;		
 		a {	
 			margin-left: 10px;
-			font-family: $page-header-font;
-			text-decoration: none;
-			color:  $button-grey-inactive;							
+			@include paragraph;								
 		}				
 	
 		&:hover {
@@ -47,8 +52,8 @@ ul {
 }
 
 svg {
-	width: 20px;
-	height: 20px;
+	width: 18px;
+	height: 18px;
 	fill: $button-grey-inactive;
 }
 
@@ -57,43 +62,54 @@ hr {
 }
 
 .show {
-	transform: translateX(-200px);
+	transform: translateX(-400px);
 }
 
 .hamburger {
-	transition: all 1.5s ease-out;
+	margin-left: 20%;
+	transition: all .7s ease-out;
 }
 
 .one {
-	transform: translateX(70px);
+	transform: translateX(270px);
 }
 
-.users > h4 {
+h4 {
 	padding-top: 10px;
 	margin: 0 auto;
 	text-align: center;
 	color: $button-grey-inactive;
 }
 
-.users > img,p {
+.users {
 	padding: 20px;
-	float: left;
-	position: relative;
+	display: flex;
+	align-items: center;    
+}
+
+.users  a {
+	padding-left: 20px;
 	color: $links;
+	&:hover {
+		color: $button-orange-active;
+	}
 }
 
-.users > img {
-	margin-left: 20px;
+.photo_users {	
+    height: 43px;
+    position: relative;
+    width: 43px;   
+	&:before {
+	    background-color: $brand-main-color;	    
+	    content: "";	    
+	    height: 12px;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    width: 12px;
+	    border-radius: 50%;
+	}
 }
 
-.users > .circle {
-	margin: 20px;
-	margin-left: 50px;
-	border-radius: 50%;
-	width: 10px;
-	height: 10px;
-	position: absolute;
-	background-color: red;
-}
 		
 

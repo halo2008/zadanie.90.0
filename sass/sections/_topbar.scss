@@ -1,0 +1,74 @@
+.topbar {
+	position: fixed;
+	width: 100%;
+	border-bottom: 1px solid $disabled-buton;
+	height: 50px;
+	display: flex;
+	justify-content: flex-end;
+
+	svg {
+		width: 19px;
+		height: 19px;
+	}
+	.arrow-down {
+		cursor: pointer;
+		padding: 4px;		
+	}
+}
+.svg-hover {
+		&:hover > svg {
+			cursor: pointer;
+			fill: $button-orange-active;
+		}
+	}
+
+ul {
+	margin: 0 auto;
+
+	h4 {
+		padding: 0 10px 0 10px;
+		font-family: $page-header-font;
+	}
+
+	a {
+		color: $links;
+		padding-left: 10px;
+		&:hover {
+			color: $button-orange-active;
+		}
+	}
+
+
+	.topbar-menu {		
+		display: inline-block;
+		display: flex;
+    	justify-content: center;
+		list-style-type: none;
+		border-left: 1px solid $disabled-buton;
+		padding: 13px;
+
+		&:hover {
+			cursor: pointer;
+			background-color: $button-color;
+		}
+	}
+}
+
+.ring {
+	cursor: pointer;   
+    position: relative;    
+      
+	&:before {
+	    background-color: $button-orange-inactive;	    
+	    content: "";	    
+	    width: 8px;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    height: 8px;	   
+	    border-radius: 50%;
+	}
+	&:hover >svg {
+		fill: $button-orange-active;
+	}
+}
