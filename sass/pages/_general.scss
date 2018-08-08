@@ -1,3 +1,55 @@
+.content {
+	display: flex;
+	flex-direction: column;
+	margin: 50px;
+	}
+
 .general-border {
-	margin: 500px;
+	background-color: #fff;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,.125);     
+	
+	width: 90%;	
+}
+
+.general-border > h3 {
+	padding: 0 0 15px 10px;
+	text-transform: uppercase;
+	border-bottom: 1px solid $disabled-buton;
+	font-family: $page-header-font;
+	color: $button-grey-active;
+}
+
+input {	
+	border-style: none;
+	padding: 20px;
+	list-style-type: none;
+	
+}
+
+.calendar  {
+	width: 25%;
+	border: 1px solid $disabled-buton;
+	border-radius: 5px;
+	border-left: 1px solid $disabled-buton;
+	display: flex;
+	justify-content: center;
+	
+}
+
+.end {
+	border-left: 1px solid $disabled-buton;
+	line-height: 10px;
+}
+
+.start {
+	&:hover{
+		border: 2px solid $disabled-buton;
+	}
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }

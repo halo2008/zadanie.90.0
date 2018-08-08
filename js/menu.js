@@ -14,13 +14,7 @@ document.querySelector('.hamburger').addEventListener('click', function(el) {
 
 
 document.getElementById("general").addEventListener("click", load_general);
-
-
 document.getElementById("links").addEventListener("click", load_links);
-function load_links() {
-     document.getElementById("content").innerHTML='<object type="text/html" data="links.html" ></object>';     
-  
-}
 
 function load_general (e) {
    (e || window.event).preventDefault();

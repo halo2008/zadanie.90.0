@@ -759,16 +759,54 @@ ul .topbar-menu:hover {
 }
 
 .content {
-  background-color: #f5f5f5;
-  margin: 0 0 0 190px;
-  min-height: calc(100vh - 50px);
-  transition: all .5s;
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
 }
 
-.general {
-  flex: fluid;
-  margin-top: 40px;
-  padding: 50px 0 0;
+.general-border {
+  background-color: #fff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.125);
+  width: 90%;
+}
+
+.general-border > h3 {
+  padding: 0 0 15px 10px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e3e3e3;
+  font-family: "Roboto", sans-serif;
+  color: #bababa;
+}
+
+input {
+  border-style: none;
+  padding: 20px;
+  list-style-type: none;
+}
+
+.calendar {
+  width: 25%;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+  border-left: 1px solid #e3e3e3;
+  display: flex;
+  justify-content: center;
+}
+
+.end {
+  border-left: 1px solid #e3e3e3;
+  line-height: 10px;
+}
+
+.start:hover {
+  border: 2px solid #e3e3e3;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
 }
 
 /*# sourceMappingURL=style.css.map */
