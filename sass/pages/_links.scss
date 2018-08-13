@@ -13,8 +13,6 @@
 	@include button;	
 }
 
-
-
 .space > h3 {	
 	margin: 0;
 	font-size: 1em;
@@ -33,15 +31,19 @@
 	}
 }
 
-table {
-	text-align: left;
-	margin: 0 auto;
-	
-}
-td {
-	width: 270px;
-	padding: 10px 0 10px 0;
-	border-bottom: 1px solid $disabled-buton;
+.page-links {
+	@include table-layout(left);
+	tr {
+		td {
+			@include table-td(200px);
+		}
+		&:hover {
+			[class*=icon-hide] {
+				visibility: visible;
+				cursor: pointer;
+			}
+		}
+	}
 }
 
 .icon-trash {
@@ -52,23 +54,15 @@ td {
 	color:$links;
 }
 
-.icons {
-	width: 100px;	
-	text-align: right;
-	&:hover {
-		[class*=icon-hide] {
-			visibility: visible;
-			cursor: pointer;
-		}
-	}
+.icons {		
+	text-align: right;	
 }
 
 .under {
 	padding-top: 20px;
 }
 
-[class*=icon-hide] {
-	text-align: right;
+[class*=icon-hide] {	
 	padding-right: 10px;
 	visibility: hidden;	
 }

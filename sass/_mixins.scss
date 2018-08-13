@@ -46,3 +46,16 @@
     cursor: pointer;
   }
 }
+
+@mixin table-td($prefix) {
+  width: $prefix;
+  padding: 10px 0 10px 0;
+  border-top: 1px solid $disabled-buton;
+  border-bottom: 1px solid $disabled-buton;
+}
+
+@mixin table-layout($prefix) {
+  text-align: $prefix;
+  margin: 0 auto;
+  border-collapse: collapse;  
+}

@@ -1,0 +1,75 @@
+.page-number {
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+}
+
+/*---layout?????????---*/
+
+.scroll-table {
+	display: block;
+  	width: 100%;
+  	overflow-x: auto;
+	@include table-layout(center);	
+}
+
+.table-container {
+	padding: 20px;
+}
+
+.highlight-row {
+	tr {
+
+		td {
+			@include table-td(140px);
+		}
+		&:hover  {
+			background-color: $disabled-buton;
+			cursor: pointer;
+		}
+	}
+	
+}
+
+
+
+.sortTable {
+	padding: 10px 0 10px 0;	
+
+}
+
+.thead-color {	
+	th {
+		i {
+			visibility: hidden;
+		}
+		
+		&:hover {
+			cursor: pointer;			
+			border-radius: 5px;
+			background-color: $disabled-buton;
+			visibility: visible;
+		}	
+ 	}
+ 	th > a {
+ 		font-size: 12px;
+		color: $button-grey-inactive;
+		font-family: $page-header-font;	}
+		
+}
+
+.page-number{
+ 	a {
+		color: $links;
+		padding: 10px;
+		font-family: $page-header-font;
+		&:hover {
+			cursor: pointer;
+			color: $button-orange-active;	
+		}
+	}
+	i {
+		padding: 10px;
+		cursor: pointer;		
+	}
+}
