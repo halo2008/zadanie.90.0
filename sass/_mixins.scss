@@ -28,3 +28,21 @@
 	font-family: $page-header-font;
 	color:  $button-grey-inactive;
 }
+
+@mixin line { 
+  display: flex;
+  justify-content: center; 
+  margin: 0 auto;  
+  padding-bottom: 20px;
+  border-bottom: 1px solid $disabled-buton;
+}
+
+@mixin button {
+  background-color: $button-orange-inactive;
+  border-style: none;
+  border-radius: 5px; 
+  &:hover {
+    background-color: $button-orange-active;
+    cursor: pointer;
+  }
+}

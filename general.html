@@ -1,19 +1,37 @@
-
-
-<div class="general-border">
-	<h3>general staistic</h3>
-	<div class="calendar">
-		<form id="calendar">
+<h3>general staistic</h3>
+<div class="content-container"> 
+	<div class="calendar">		
+		<form class="border-input">
 			<div>
 				<input type="date" name="period-start" value="">				
-				<input  class="end" type="date" name="period-end" value=""><span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-		 		viewBox="0 0 13 13" style="enable-background:new 0 0 13 13;" xml:space="preserve">
-				<path d="M0,0v4h13V0H0z M12,3H1V1h11V3z M0,7h3V6H0V7z M5,7h3V6H5V7z M10,7h3V6h-3V7z M0,10h3V9H0V10z M5,10h3V9H5V10z M10,10h3V9
-				h-3V10z M0,13h3v-1H0V13z M5,13h3v-1H5V13z M10,13h3v-1h-3V13z"/>
-				</svg></span>				
-			</div>	
-		
-		</form>
+				<input  class="end" type="date" name="period-end" value="">
+				<span><i class="sidebarIco icon-calendar"></i>				
+				</span>								
+			</div>				
+		</form>			
+		<button class="refresh">
+			<i class="icon-refresh"></i>
+		</button>
 	</div>
-		
+	<div class="content-container-next">
+		<div class="general-info">
+			<div class="content-info">
+				<span>Visit singups</span><br>
+				<span>124<br></span>
+			</div>
+			<div class="content-info">
+				<span>Net depostit</span>
+				<span>564</span>
+			</div>
+			<div class="content-info">
+				<span>FTD</span>
+				<span>445</span>
+			</div>
+			<div class="content-info">
+				<span>Turn over</span>
+				<span>432</span>
+			</div>
+		</div>
+	</div>
 </div>
+<canvas id="myChart"></canvas>

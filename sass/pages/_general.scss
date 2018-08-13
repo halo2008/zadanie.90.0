@@ -1,38 +1,77 @@
-.content {
-	display: flex;
-	flex-direction: column;
-	margin: 50px;
-	}
-
-.general-border {
-	background-color: #fff;
-    box-shadow: 0 0 15px 0 rgba(0,0,0,.125);     
-	
-	width: 90%;	
-}
-
 .general-border > h3 {
-	padding: 0 0 15px 10px;
+	padding: 15px;	
 	text-transform: uppercase;
 	border-bottom: 1px solid $disabled-buton;
 	font-family: $page-header-font;
 	color: $button-grey-active;
 }
 
-input {	
-	border-style: none;
+.content-container {
+	width: 100%;
+}
+
+.content-container-next {
+	margin: 0 auto;
+	width: 40%;
 	padding: 20px;
-	list-style-type: none;
+
+}
+
+.content-info {
+	align-items: center;
+    border-bottom: 1px solid #e3e3e3;   
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    margin: 0 14px 14px;
+    width: 300px;
+}
+
+.general-info {		
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 42px;
+	span {
+		font-family: $page-header-font;
+		color: $button-grey-active;
+		display: block;
+		
+	}
+}
+
+.calendar {
+	@include line;
+	margin: 0 auto;	
+	
+	button {
+		margin: 10px 0 0 25px;	
+	}	
 	
 }
 
-.calendar  {
-	width: 25%;
+.border-input {
+	width: 410px;
 	border: 1px solid $disabled-buton;
-	border-radius: 5px;
-	border-left: 1px solid $disabled-buton;
-	display: flex;
-	justify-content: center;
+	border-radius: 5px;	
+}
+
+
+
+input {
+	border-style: none;
+	padding: 15px;
+	list-style-type: none;
+}
+
+.refresh {
+	width: 40px;
+	height: 40px;
+	@include button;
+
+	.icon-refresh {
+		color: $main-color;
+	}
 	
 }
 

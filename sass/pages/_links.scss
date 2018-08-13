@@ -1,0 +1,79 @@
+.links {
+	@include line;
+	border-bottom: none;	
+}
+
+.add-new {
+	font-family: $brand-font;
+	font-weight: lighter;
+	font-size: 1.2em;
+	width: 120px;
+	height: 40px;
+	color: $main-color;
+	@include button;	
+}
+
+
+
+.space > h3 {	
+	margin: 0;
+	font-size: 1em;
+	color: $button-grey-inactive;
+	font-family: $page-header-font;
+}
+
+.space > a {
+	font-family: $page-header-font;
+	font-weight: lighter;
+	text-decoration: none;
+	color: $links;
+	&:hover {
+		cursor: pointer;
+		color:$button-orange-active;
+	}
+}
+
+table {
+	text-align: left;
+	margin: 0 auto;
+	
+}
+td {
+	width: 270px;
+	padding: 10px 0 10px 0;
+	border-bottom: 1px solid $disabled-buton;
+}
+
+.icon-trash {
+	color:$notification-negative-active;
+}
+
+.icoLink {
+	color:$links;
+}
+
+.icons {
+	width: 100px;	
+	text-align: right;
+	&:hover {
+		[class*=icon-hide] {
+			visibility: visible;
+			cursor: pointer;
+		}
+	}
+}
+
+.under {
+	padding-top: 20px;
+}
+
+[class*=icon-hide] {
+	text-align: right;
+	padding-right: 10px;
+	visibility: hidden;	
+}
+
+
+
+
+

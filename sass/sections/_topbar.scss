@@ -5,11 +5,9 @@
 	height: 50px;
 	display: flex;
 	justify-content: flex-end;
+	top: 0;
+	background-color: $main-color;
 
-	svg {
-		width: 19px;
-		height: 19px;
-	}
 	.arrow-down {
 		cursor: pointer;
 		padding: 4px;		
@@ -46,10 +44,11 @@ ul {
 		list-style-type: none;
 		border-left: 1px solid $disabled-buton;
 		padding: 13px;
+		height: 50px;
 
 		&:hover {
 			cursor: pointer;
-			background-color: $button-color;
+			
 		}
 	}
 }
