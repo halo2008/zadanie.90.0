@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9990;
+  z-index: 999;
 
   width: 100%;
   height: 100%;
@@ -12,33 +12,226 @@
   align-items: center;
 
   overflow: auto;
-  padding: 30px; 
-}
+  padding: 30px;
 
-.overlay.show {
-  display: flex;
-}
-
-.overlay::webkit-scrollbar {
   display: none;
 }
 
-.modal.show {
-  display: block;
+.overlay.showModal {
+  display: flex;
 }
 
 .modal {
-  max-width: 600px;
+  max-width: 800px;  
   margin: auto;
   background-color: #ffffff;
-  position: relative;
-  padding: 30px;
-  
+  position: relative;  
+  display: none;
+	input[type=text], 
+	select {		
+		padding: 12px 20px;
+    	margin: 8px 0;
+   	 	display: inline-block;
+   		border: 1px solid #ccc;
+    	border-radius: 5px;
+    	box-sizing: border-box;
+    	background-color: $main-color;
+	}
+	
+	
+	.modal-header {		
+		display: flex;
+		margin: 0;
+		
+		h4 {		
+		display: inline;
+		padding: 0;
+		margin-left: 0;
+		font-family: $page-header-font;		
+		}
+
+		.lang {
+			margin-right: 0;			
+		}
+	}
+
+	h3 {
+		margin-left: 20px;
+		font-family: $page-header-font;
+		color: $button-grey-active;
+	}
+
+	.line {
+		border-bottom: 1px solid $disabled-buton;
+	}
+
+	i {
+		padding: 20px;
+		color: $button-grey-active;
+		cursor: pointer;
+	}
+	form {
+		padding: 20px;
+	}
+}
+
+
+.border-input-link {
+	width: 300px;
+	border: 1px solid black;
+}
+
+#compain {
+	width: 300px;
+}
+
+
+.modal.showModal {
+	justify-content: center;
+	align-items: center;
+	display: block;
 }
 
 .modal .btn-close {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 5px 10px;
+}
+
+.select-option {
+    display: block;
+    position: relative;
+    padding-left: 35px;    
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+	input {
+    	position: absolute;
+   		opacity: 0;
+    	cursor: pointer;
+    }
+
+    &:hover input ~ .checkmark {
+    	
+	}
+
+	input:checked ~ .checkmark {
+   		background-color: $marks;
+	}
+
+	input:checked ~ .checkmark:after {
+    	display: block;
+	}
+	.checkmark{
+		&:after {
+		    left: 4px;
+		    top: 0px;
+		    width: 5px;
+		    height: 8px;
+		    border: solid $main-color;
+		    border-width: 0 2px 2px 0;
+		    -webkit-transform: rotate(45deg);
+		    -ms-transform: rotate(45deg);
+		    transform: rotate(45deg);
+		}
+	}
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: $main-color;
+    border: 1px solid $disabled-buton;
+	&:after {
+	    content: "";
+	    position: absolute;
+	    display: none;
+	}
+}
+
+.modal-container {
+	padding: 20px;
+	display: block;
+  	width: 100%;
+  	max-height: 400px;
+	overflow-y: auto;
+
+	table {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	h4 {
+		padding-bottom: 40px;
+		text-align: left;
+	}
+	td {		
+		padding: 10px;
+		&:hover {
+			background-color: $disabled-buton;
+			i {			
+				visibility: visible;
+			}
+		}	
+	}
+
+	i {		
+		color: $links;		
+		visibility: hidden;
+	}
+}
+
+.btn-copy {
+	font-family: $brand-font;
+	font-weight: lighter;	
+	width: 160px;
+	height: 44px;
+	color: $main-color;
+	i {
+		padding: 10px;
+		color: $main-color;
+	}
+	@include button;
+	background-color: $disabled-buton;
+}
+
+.btn-save {
+	width: 100px;
+	height: 44px;
+	color: $main-color;
+	@include button;
+}
+
+.modal-footer {
+	form {
+		input{
+			width: 400px;
+		}
+	}
+}
+	
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }

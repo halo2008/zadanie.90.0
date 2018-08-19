@@ -53,12 +53,12 @@
 .border-input {
 	width: 410px;
 	border: 1px solid $disabled-buton;
-	border-radius: 5px;	
+	border-radius: 2%;	
 }
 
 
 
-input {
+.set-date > input {
 	border-style: none;
 	padding: 15px;
 	list-style-type: none;

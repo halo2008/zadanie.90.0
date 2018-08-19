@@ -7,8 +7,6 @@ function hamburger(hide) {
 	document.querySelector('.hamburger').classList.toggle('one', hide);  
 }
 
-
-
 document.querySelector('.hamburger').addEventListener('click', function(el) {
   el.preventDefault();
   toggleMenu();
@@ -83,12 +81,9 @@ function load_general (e) {
    var con = document.getElementById('content'),
        xhr = new XMLHttpRequest();
 
-   xhr.onload = function (e) { 
-    if (xhr.readyState == 4 && xhr.status == 200) {
-     con.innerHTML = xhr.responseText;
-
-      charts();
-    }
+   xhr.onload = function (e) {    
+    con.innerHTML = xhr.responseText;
+    charts();   
    }
 
  xhr.open("GET", "general.html", true);
@@ -101,11 +96,9 @@ function load_links (e) {
    var con = document.getElementById('content'),
        xhr = new XMLHttpRequest();
 
-   xhr.onreadystatechange = function (e) { 
-    if (xhr.readyState == 4 && xhr.status == 200) {
+   xhr.onload = function (e) {     
      con.innerHTML = xhr.responseText;  
-     document.getElementById("addLink").addEventListener("click", load_addlink);
-    }
+     document.getElementById("addLink").addEventListener("click", openModal);    
    }
 
  xhr.open("GET", "links.html", true);
@@ -119,10 +112,8 @@ function load_details (e) {
    var con = document.getElementById('content'),
        xhr = new XMLHttpRequest();
 
-   xhr.onreadystatechange = function (e) { 
-    if (xhr.readyState == 4 && xhr.status == 200) {
-     con.innerHTML = xhr.responseText;
-    }
+   xhr.onload = function (e) {     
+     con.innerHTML = xhr.responseText;  
    }
 
  xhr.open("GET", "details.html", true);
@@ -130,55 +121,37 @@ function load_details (e) {
  xhr.send();
 }
 
-function load_addlink (e) {
-   (e || window.event).preventDefault();
-   var con = document.getElementById('modal'),
-       xhr = new XMLHttpRequest();
-
-   xhr.onreadystatechange = function (e) { 
-    if (xhr.readyState == 4 && xhr.status == 200) {
-     con.innerHTML = xhr.responseText;
-    
-/*-----------------modal----------------*/
-function closeModal() {
-      document.getElementById('overlay').classList.remove('show')
-    }
-    document.querySelectorAll('#overlay .js--close-modal').forEach(function(btn) {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault()
-        closeModal()
-      })
-    })
-
-    document.querySelector('#overlay').addEventListener('click', function(e) {
-      if(e.target === this) {
-        closeModal()
-      }
-    })
-
-    document.addEventListener('keyup', function(e) {
-      if(e.keyCode === 27) {
-        closeModal()
-      }
-    })
-
-    function openModal(modal) {
-      document.querySelectorAll('#overlay > *').forEach(function(modal) {
-        modal.classList.remove('show')
-      })
-      document.querySelector('#overlay').classList.add('show')
-      document.querySelector(modal).classList.add('show')
-    }
-    
-/*-----------------------modal--------------------------------*/
-    }
-   }
-
- xhr.open("GET", "addlinks.html", true);
- xhr.setRequestHeader('Content-type', 'text/html');
- xhr.send();
-}
-
-
 
 /*-------------------------Canvas-----------------------*/
+
+
+function closeModal() {
+  document.getElementById('overlay').classList.remove('showModal')
+}
+
+document.querySelectorAll('#overlay .js--close-modal').forEach(function(btn) {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault()
+    closeModal()
+  })
+})
+
+document.querySelector('#overlay').addEventListener('click', function(e) {
+  if(e.target === this) {
+    closeModal()
+  }
+})
+
+document.addEventListener('keyup', function(e) {
+  if(e.keyCode === 27) {
+    closeModal()
+  }
+})
+
+function openModal(modal) {
+  document.querySelectorAll('#overlay > *').forEach(function(modal) {
+    modal.classList.remove('showModal')
+  })
+  document.querySelector('#overlay').classList.add('showModal')
+  document.querySelector('.modal').classList.add('showModal')
+}
