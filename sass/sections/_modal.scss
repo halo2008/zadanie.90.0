@@ -42,24 +42,25 @@
 	
 	.modal-header {		
 		display: flex;
-		margin: 0;
-		
-		h4 {		
-		display: inline;
-		padding: 0;
-		margin-left: 0;
-		font-family: $page-header-font;		
-		}
+		margin: 0;		
 
 		.lang {
 			margin-right: 0;			
 		}
 	}
 
+	h4 {		
+		display: inline;
+		padding: 0;
+		margin-left: 0;
+		font-family: $page-header-font;		
+	}
+
 	h3 {
 		margin-left: 20px;
 		font-family: $page-header-font;
 		color: $button-grey-active;
+		text-transform: uppercase;
 	}
 
 	.line {
@@ -157,18 +158,60 @@
 	}
 }
 
+
+	
+
+	#addBanners {
+		table {
+			width: 50%;
+			max-width: 50%;
+			float: left;
+		}
+	}
+
+
+.middle-line {		
+		&:after{
+		content:"";
+	    position: absolute;
+	    z-index: -1;
+	    top: 1px;
+	    height: 100%;
+	    left: 50%;
+	    border-left: 10px solid $disabled-buton;
+	    transform: translate(-50%);
+	}	
+}
+
+
+.table-column {
+	display: flex;
+	padding: 20px;
+	display: block;
+  	width: 100%;  	
+  	    
+
+	table {
+		max-height: 400px;
+		width: 100%;
+		max-width: 100%;
+		overflow: auto;		
+	}
+}
+
+
 .modal-container {
 	display: flex;
 	padding: 20px;
 	display: block;
-  	width: 100%;
-  	max-height: 400px;
-	overflow-y: auto;   
-    
+  	width: 100%;  	
+  	    
 
 	table {
+		max-height: 400px;
 		width: 100%;
 		max-width: 100%;
+		overflow: auto;		
 	}
 
 	h4 {
@@ -185,7 +228,6 @@
 		&:hover {
 			background-color: $disabled-buton;
 			i {	
-
 				visibility: visible;
 			}
 		}	

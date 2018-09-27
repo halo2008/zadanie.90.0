@@ -6,8 +6,7 @@
 
 /*---layout?????????---*/
 
-.scroll-table {
-	display: block;
+.scroll-table {	
   	width: 100%;
   	overflow-x: auto;
 	@include table-layout(center);	
@@ -27,11 +26,8 @@
 			background-color: $disabled-buton;
 			cursor: pointer;
 		}
-	}
-	
+	}	
 }
-
-
 
 .sortTable {
 	padding: 10px 0 10px 0;	
@@ -54,8 +50,7 @@
  	th > a {
  		font-size: 12px;
 		color: $button-grey-inactive;
-		font-family: $page-header-font;	}
-		
+		font-family: $page-header-font;	}		
 }
 
 .page-number{
