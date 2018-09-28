@@ -65,100 +65,66 @@ function charts() {
 
 charts();
 
-
-
-
-
 /*------------------------------Ajax------------------------------*/
 
-document.getElementById("general").addEventListener("click", loadGeneral);
-document.getElementById("links").addEventListener("click", loadLinks);
-document.getElementById("details").addEventListener("click", loadDetails);
-document.getElementById("banners").addEventListener("click", loadBanners);
-document.getElementById("payout").addEventListener("click", loadPayout);
+document.getElementById("general").addEventListener("click", function(){
+  loadPages(event, "general.html", charts);
+});
+document.getElementById("links").addEventListener("click", function(){
+  loadPages(event, "links.html", function(){
+    document.getElementById("addLinks").addEventListener("click", function() {
+      showModal(event);
+      document.getElementById("modalLinks").classList.add('showModal');
+    });
+  });  
+});
 
-function loadPayout (e) {
-   (e || window.event).preventDefault();
+document.getElementById("details").addEventListener("click", function() {
+  loadPages(event, "details.html");
+});
+
+document.getElementById("banners").addEventListener("click", function() {
+  loadPages(event, "banners.html", function(){
+    document.getElementById("addBanners").addEventListener("click", function(){
+      showModal(event);
+      document.getElementById("modalBanners").classList.add('showModal');
+    });
+  });
+});
+
+document.getElementById("payout").addEventListener("click", function () {
+  loadPages(event, "payout.html");
+});
+
+
+function loadPages (event, pages, callback) {
+   (event || window.event).preventDefault();
    var con = document.getElementById('content'),
        xhr = new XMLHttpRequest();
 
-   xhr.onload = function (e) {    
-    con.innerHTML = xhr.responseText;
-    charts();   
+   xhr.onload = function (event) {     
+     con.innerHTML = xhr.responseText;
+    if (callback) {
+     callback();
+    }
    }
 
- xhr.open("GET", "payout.html", true);
- xhr.setRequestHeader('Content-type', 'text/html');
- xhr.send();
-}
-
-function loadBanners (e) {
-   (e || window.event).preventDefault();
-   var con = document.getElementById('content'),
-       xhr = new XMLHttpRequest();
-
-   xhr.onload = function (e) {    
-    con.innerHTML = xhr.responseText;
-    charts();   
-   }
-
- xhr.open("GET", "banners.html", true);
- xhr.setRequestHeader('Content-type', 'text/html');
- xhr.send();
-}
-
-
-function loadGeneral (e) {
-   (e || window.event).preventDefault();
-   var con = document.getElementById('content'),
-       xhr = new XMLHttpRequest();
-
-   xhr.onload = function (e) {    
-    con.innerHTML = xhr.responseText;
-    charts();   
-   }
-
- xhr.open("GET", "general.html", true);
- xhr.setRequestHeader('Content-type', 'text/html');
- xhr.send();
-}
-
-function loadLinks (e) {
-   (e || window.event).preventDefault();
-   var con = document.getElementById('content'),
-       xhr = new XMLHttpRequest();
-
-   xhr.onload = function (e) {     
-     con.innerHTML = xhr.responseText;  
-     //document.getElementById("addLink").addEventListener("click", showModal);    
-   }
-
- xhr.open("GET", "links.html", true);
+ xhr.open("GET", pages, true);
  xhr.setRequestHeader('Content-type', 'text/html');
  xhr.send();
 }
 
 
-function loadDetails (e) {
-   (e || window.event).preventDefault();
-   var con = document.getElementById('content'),
-       xhr = new XMLHttpRequest();
-
-   xhr.onload = function (e) {     
-     con.innerHTML = xhr.responseText;  
-   }
-
- xhr.open("GET", "details.html", true);
- xhr.setRequestHeader('Content-type', 'text/html');
- xhr.send();
-}
-
-
+/*function loadModal (idButton, idModal){
+  document.getElementById(idButton).addEventListener("click", function(){
+    showModal(event);
+    document.getElementById(idModal).classList.add('showModal');
+  });
+}*/
 
 var showModal = function(event){
   event.preventDefault();
   document.querySelector('#modal-overlay').classList.add('showModal');
-  document.querySelector('.modal').classList.add('showModal');
 };
 
 var modalLinks = document.querySelectorAll('.show-modal');
@@ -174,7 +140,7 @@ for(var i = 0; i < modalLinks.length; i++){
 }
 
 var hideModal = function(event){
-//event.preventDefault();   //??
+  event.preventDefault(); 
   document.querySelector('#modal-overlay').classList.remove('showModal');
   
   var closeModal = document.querySelectorAll('.modal');
@@ -186,7 +152,7 @@ var hideModal = function(event){
 
 document.addEventListener('keyup', function(event) {
   if(event.keyCode === 27) {
-    hideModal();
+    hideModal(event);
   }
 })
 

@@ -59,3 +59,36 @@
   margin: 0 auto;
   border-collapse: collapse;  
 }
+
+@mixin table {
+  table {
+    max-height: 400px;
+    overflow: auto;   
+  }
+
+  h4 {
+    padding-bottom: 40px;
+    text-align: left;
+  }
+  td {      
+    padding: 5px;
+    font-size: 12px;
+    font-family: $page-header-font;
+    font-weight: lighter;
+    
+    justify-content: spacebetween;    
+    
+    &:hover {
+      background-color: $disabled-buton;
+      i { 
+        visibility: visible;
+      }
+    } 
+  }
+
+  i {    
+    font-size: .75em;   
+    color: $links;    
+    visibility: hidden;
+  }
+}

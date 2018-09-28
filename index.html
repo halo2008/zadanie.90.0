@@ -11,7 +11,7 @@
 
 	<section>		
 		<div class="overlay" id="modal-overlay">
-  			<div class="modal" id="modalOne">
+  			<div class="modal" id="modalLinks">
   				<div class="line">
   					<h3>Add Link</h3>
    					<i class="btn-close close icon-close"></i>
@@ -293,7 +293,7 @@
 				
 			</div>
 			<!-- banners -->
-			<div class="modal" id="addBanners">
+			<div class="modal" id="modalBanners">
 				<div class="line">
   					<h3>Add Banners</h3>
    					<i class="btn-close close icon-close"></i>
@@ -317,10 +317,10 @@
 					    </select>
 	   				</form>
 	   				<form class="set-date">
-	   					<div class="modal-header">
+	   					<div class="modal-header word-spacing">
 	   						<h4>Weight-Height</h4>
 							<h4>Design</h4>
-	   						<h4 class="lang">File type</h4>
+	   						<h4 class="lang">File-type</h4>
 	   					</div>
 	   					<select name="select">
 					      <option value="one">Select</option>
@@ -339,13 +339,13 @@
 					    </select>
 	   				</form>
 	   			</div>
-	   			<div class="line">   				
-	    			<div class="modal-container middle-line">
-	    				<div class="modal-header">
-		    				<h4>Select Banners</h4>
-		    				<h4>Select Websities</h4>
-	    				</div>     				   				
-	    				<table class="table-column">    					
+	   			<div class="line middle-line">
+	   				<div class="table-header">
+		   				<h4>Select banners</h4>
+		   				<h4>Select websites</h4>
+	   				</div>	   				
+	    			<div class="table-column base">	    							
+	    				<table class="table-column">	    					    								
 	    					<tr> 
 	    						<td> 	
 		    						<label class="select-option">Landing Page Money
@@ -615,10 +615,11 @@
 		  								<i class="icon-show"></i>
 									</label>
 								</td>
-							</tr>
-							
+							</tr>						
 						</table>
-						<table class="table-column">						
+						
+						<table class="table-column">
+							<tr><td></td></tr>						
 	    					<tr> 
 	    						<td> 	
 		    						<label class="select-option">Landing Page Money
@@ -888,8 +889,7 @@
 		  								<i class="icon-show"></i>
 									</label>
 								</td>
-							</tr>
-							
+							</tr>					
 						</table>
 					</div>
 				</div>
@@ -907,7 +907,7 @@
 
  		</div>
 	</section>
-
+	<a href="#addLinks" class="show-modal"></a>
 	<section class="topbar">
 		<div>
 			<ul class="row">
@@ -918,13 +918,14 @@
 				</li>
 				<li class="topbar-menu">
 					<div class="ring svg-hover">
-					<i class="sidebarIco icon-notification"></i>
-					<a href="#login" class="show-modal">
+						<i class="sidebarIco icon-notification"></i>					
 					</div>					
 				</li>
 				<li class="topbar-menu">
+					<a href="#login" class="show-modal">
 					<i class="sidebarIco icon-profile"></i>
-					<a href="#addBanners" class="show-modal">Johny Bravo</a></li>				
+					Johny Bravo</a>
+				</li>				
 				<li id="quit" class="topbar-menu svg-hover">
 					<i class="sidebarIco icon-quit"></i>
 				</li>

@@ -37,6 +37,8 @@
     	border-radius: 5px;
     	box-sizing: border-box;
     	background-color: $main-color;
+    	color: $button-grey-active;
+    	width: 300px;
 	}
 	
 	
@@ -77,16 +79,15 @@
 	}
 }
 
+.word-spacing {
+	word-spacing: 150px;
+}
+
 
 .border-input-link {
 	width: 300px;
 	border: 1px solid black;
 }
-
-#compain {
-	width: 300px;
-}
-
 
 .modal.showModal {
 	justify-content: center;
@@ -156,87 +157,47 @@
 	    position: absolute;
 	    display: none;
 	}
-}
-
-
-	
-
-	#addBanners {
-		table {
-			width: 50%;
-			max-width: 50%;
-			float: left;
-		}
-	}
-
+}	
 
 .middle-line {		
 		&:after{
 		content:"";
-	    position: absolute;
-	    z-index: -1;
-	    top: 1px;
-	    height: 100%;
+	    position: absolute;	   
+	    top: 299px;
+	    height: 55%;
 	    left: 50%;
-	    border-left: 10px solid $disabled-buton;
+	    border-left: 1px solid $disabled-buton;
 	    transform: translate(-50%);
 	}	
 }
 
-
 .table-column {
+	padding: 15px;	
 	display: flex;
-	padding: 20px;
-	display: block;
-  	width: 100%;  	
-  	    
-
+	@include table;
 	table {
-		max-height: 400px;
-		width: 100%;
-		max-width: 100%;
-		overflow: auto;		
-	}
+		flex-basis: 50%;
+	}	
 }
 
+.base {
+	padding-right: 10px;
+}
+
+.table-header {
+	display: flex;
+	padding: 20px 0 20px 20px;
+}
 
 .modal-container {
 	display: flex;
 	padding: 20px;
-	display: block;
-  	width: 100%;  	
-  	    
+	flex-basis: 100%;
+  	flex-wrap: wrap;    
 
+	@include table;
 	table {
-		max-height: 400px;
 		width: 100%;
-		max-width: 100%;
-		overflow: auto;		
-	}
-
-	h4 {
-		padding-bottom: 40px;
-		text-align: left;
-	}
-	td {			
-		padding: 5px;
-		font-size: 12px;
-		font-family: $page-header-font;
-		font-weight: lighter;
-		
-		
-		&:hover {
-			background-color: $disabled-buton;
-			i {	
-				visibility: visible;
-			}
-		}	
-	}
-
-	i {	
-		font-size: .75em;		
-		color: $links;		
-		visibility: hidden;
 	}
 }
 
