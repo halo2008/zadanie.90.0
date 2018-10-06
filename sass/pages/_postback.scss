@@ -46,6 +46,35 @@ textarea {
 }
 
 .postback-table {
-	max-height: 200px;
-	overflow-y: auto;
+	padding: 15px;	
+	display: flex;
+	@include table (100px);
+	table {		
+		flex-basis: 49%;
+		i {
+			padding-left: 150px;
+		}
+	}
+}
+
+.slider {
+	width: 66%;
+	padding-left: 144px;
+}
+
+.right {
+	justify-content: flex-end;
+	padding-right: 50px;
+}
+
+.middle-line-post {		
+		&:after{
+		content:"";
+	    position: absolute;	   
+	    top: 721px;
+	    height: 199px;
+	    left: 51%;
+	    border-left: 1px solid $disabled-buton;
+	    transform: translate(-50%);
+	}	
 }

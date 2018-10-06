@@ -60,9 +60,9 @@
   border-collapse: collapse;  
 }
 
-@mixin table {
+@mixin table($prefix) {
   table {
-    max-height: 400px;
+    max-height: $prefix;
     overflow: auto;   
   }
 

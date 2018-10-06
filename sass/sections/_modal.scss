@@ -139,8 +139,8 @@
 		&:after{
 		content:"";
 	    position: absolute;	   
-	    top: 283px;
-	    height: 56%;
+	    top: 292px;
+	    height: 489px;
 	    left: 50%;
 	    border-left: 1px solid $disabled-buton;
 	    transform: translate(-50%);
@@ -186,7 +186,7 @@
 .table-column {
 	padding: 15px;	
 	display: flex;
-	@include table;
+	@include table (400px);
 	table {		
 		flex-basis: 49%;
 		i {
@@ -209,8 +209,8 @@
 	padding: 20px;
 	flex-basis: 100%;
   	flex-wrap: wrap;    
-
-	@include table;
+	overflow-y: auto;
+	@include table (250px);
 	table {
 		width: 100%;
 	}
