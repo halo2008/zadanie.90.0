@@ -29,10 +29,8 @@ function clickSingleButton(ul)
 
 function addNew() {
     var table = document.getElementById("linker");
-    var row = table.insertRow(0);   
-    
+    var row = table.insertRow(0);       
 }
-
 
 function charts() {
   var ctx = document.getElementById('myChart').getContext('2d');
@@ -83,6 +81,10 @@ document.getElementById("details").addEventListener("click", function() {
   loadPages(event, "details.html");
 });
 
+document.getElementById("personal").addEventListener("click", function() {
+  loadPages(event, "personal.html");
+});
+
 document.getElementById("banners").addEventListener("click", function() {
   loadPages(event, "banners.html", function(){
     document.getElementById("addBanners").addEventListener("click", function(){
@@ -94,6 +96,10 @@ document.getElementById("banners").addEventListener("click", function() {
 
 document.getElementById("payout").addEventListener("click", function () {
   loadPages(event, "payout.html");
+});
+
+document.getElementById("postback").addEventListener("click", function () {
+  loadPages(event, "postback.html");
 });
 
 

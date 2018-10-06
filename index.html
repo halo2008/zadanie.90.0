@@ -8,30 +8,36 @@
 	<title>Stuff</title>
 </head>
 <body id="body" class="">
-
 	<section>		
 		<div class="overlay" id="modal-overlay">
-  			<div class="modal" id="modalLinks">
+  			<div class="modal" id="modalLinks">      <!--add links -->
   				<div class="line">
   					<h3>Add Link</h3>
    					<i class="btn-close close icon-close"></i>
    				</div>
-   				<form class="set-date line">
+   				<form class="form-box line">
    					<div class="modal-header">
-   						<h4>Scheme name</h4>
-   						<h4 class="lang">Language</h4>
-   					</div>
-   					<input class="border-input-link" type="text" name="name" placeholder="Name">
-   					<select id="compain" name="campain-select">
-				      <option value="one">Select compain</option>
-				      <option value="two">Second compain</option>
-				      <option value="three">Third compain</option>
-				    </select>
-   					<select id="language" name="language">
-				      <option value="English">EN</option>
-				      <option value="Polish">PL</option>
-				      <option value="German">DE</option>
-				    </select>
+	   					<div class="select-box">
+		   					<h4>Scheme name</h4>
+		   					<input class="border-input-link" type="text" name="name" placeholder="Name">
+		   				</div>
+		   				<div class="select-box">
+		   					<h4>.</h4>					
+		   					<select id="compain" name="campain-select">   						
+						      <option value="one">Select compain</option>
+						      <option value="two">Second compain</option>
+						      <option value="three">Third compain</option>
+						    </select>
+						</div>
+					    <div class="select-box">
+					    	<h4>Language</h4>
+		   					<select id="language" name="language">   						
+						      <option value="English">EN</option>
+						      <option value="Polish">PL</option>
+						      <option value="German">DE</option>
+						    </select>
+					    </div>
+					</div>
    				</form>   				
     			<div class="modal-container line">
     				<h4>Select websities</h4>
@@ -277,7 +283,7 @@
     			</div>
  			</div>
 			<!-- logout -->
-			<div class="modal" id="login">
+			<div class="modal" id="login"> 			<!-- modal login -->
 				<div class="line">
 					<h3>Login</h3>
 	   				<i class="btn-close close icon-close"></i>
@@ -286,611 +292,631 @@
 					<input class="border-input-link" type="text" name="login" placeholder="login name">	
 					<input class="border-input-link" type="password" name="pass" placeholder="password">
 					<button class="btn-save close">Enter</button>	
-				</div>
-
-
-				
-				
+				</div>				
 			</div>
-			<!-- banners -->
-			<div class="modal" id="modalBanners">
+			<div class="modal quit" id="quit"> 			<!-- modal quit -->
+				<div class="line">
+					<h3>Do you really want to Quit?</h3>	   				
+				</div>
+				<div class="modal-container btn-quit">
+					<button class="btn-copy">Cancel</button>
+					<button class="btn-save close">Quit</button>	
+				</div>				
+			</div>
+
+		
+			<div class="modal" id="modalBanners">				<!--add banners -->
 				<div class="line">
   					<h3>Add Banners</h3>
    					<i class="btn-close close icon-close"></i>
    				</div>
    				<div class="line">
-	   				<form class="set-date">
+	   				<form class="form-box">
 	   					<div class="modal-header">
-	   						<h4>Scheme name</h4>
-	   						<h4 class="lang">Language</h4>
-	   					</div>
-	   					<input class="border-input-link" type="text" name="name" placeholder="Name">
-	   					<select name="campain-select">
-					      <option value="one">Select compain</option>
-					      <option value="two">Second compain</option>
-					      <option value="three">Third compain</option>
-					    </select>
-	   					<select  name="language">
-					      <option value="English">EN</option>
-					      <option value="Polish">PL</option>
-					      <option value="German">DE</option>
-					    </select>
+	   						<div class="select-box">
+		   						<h4>Scheme name</h4>
+			   					<input class="border-input-link" type="text" name="name" placeholder="Name">
+		   					</div>
+		   					<div class="select-box">
+		   						<h4>Compain</h4>
+			   					<select name="campain-select">			   						
+							      	<option value="one">Select compain</option>
+							      	<option value="two">Second compain</option>
+							    	<option value="three">Third compain</option>
+							    </select>
+							</div>
+							<div class="select-box last-box">
+								<h4>Language</h4>
+			   					<select  name="language">			   						
+							    	<option value="English">EN</option>
+							    	<option value="Polish">PL</option>
+							    	<option value="German">DE</option>
+							    </select>
+							</div>
+						</div>
 	   				</form>
-	   				<form class="set-date">
-	   					<div class="modal-header word-spacing">
-	   						<h4>Weight-Height</h4>
-							<h4>Design</h4>
-	   						<h4 class="lang">File-type</h4>
-	   					</div>
-	   					<select name="select">
-					      <option value="one">Select</option>
-					      <option value="two">Second compain</option>
-					      <option value="three">Third compain</option>
-					    </select>   					
-	   					<select name="select">
-					      <option value="one">Select</option>
-					      <option value="two">Second compain</option>
-					      <option value="three">Third compain</option>
-					    </select>
-	   					<select name="language">
-					      <option value="all">All</option>
-					      <option value="png">PNG</option>
-					      <option value="jpg">JPG</option>
-					    </select>
+	   				<form class="form-box">
+	   					<div class="modal-header">							
+	   					<div class="select-box">	
+		   					<h4>Weight-Height</h4>
+		   					<select name="select">	   					  
+						      <option value="one">Select</option>
+						      <option value="two">Second compain</option>
+						      <option value="three">Third compain</option>
+						    </select>
+						</div>
+						<div class="select-box">	
+					   		<h4>Design</h4>   					
+		   					<select name="select">	   						
+						      <option value="one">Select</option>
+						      <option value="two">Second compain</option>
+						      <option value="three">Third compain</option>
+						    </select>
+						</div>
+					    <div class="select-box">	
+					    	<h4>File-type</h4>
+	   						<select name="language">	   						
+					    		<option value="all">All</option>
+					    		<option value="png">PNG</option>
+					   			<option value="jpg">JPG</option>
+					    	</select>
+						</div>
+					    </div>
 	   				</form>
 	   			</div>
-	   			<div class="line middle-line">
-	   				<div class="table-header">
-		   				<h4>Select banners</h4>
-		   				<h4>Select websites</h4>
-	   				</div>	   				
-	    			<div class="table-column base">	    							
-	    				<table class="table-column">	    					    								
-	    					<tr> 
-	    						<td> 	
-		    						<label class="select-option">Landing Page Money
-		  								<input type="checkbox" checked="checked">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Mobile app
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Your second site
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr> 
-	    						<td> 	
-		    						<label class="select-option">LP Your choise
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">LP Senator free signals
-		  								<input type="checkbox" checked="checked">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Your second LP
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr> 
-	    						<td> 	
-		    						<label class="select-option">LP Wallet
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">LP DE Your choise
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Landing page Money
-		  								<input type="checkbox" checked="checked">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr> 
-	    						<td> 	
-		    						<label class="select-option">E-Shop 01
-		  								<input type="checkbox" >
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Invest wisely
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">LP Your choise
-		  								<input type="checkbox" checked="checked">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr> 
-	    						<td> 	
-		    						<label class="select-option">Toy Store
-		  								<input type="checkbox" >
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Toy Store LP Sign up page
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">LP Wallet
-		  								<input type="checkbox" checked="checked">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr> 
-	    						<td> 	
-		    						<label class="select-option">Book Store
-		  								<input type="checkbox" >
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Senator Account types
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">E-Shop 01
-		  								<input type="checkbox" checked="checked">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr> 
-	    						<td> 	
-		    						<label class="select-option">Charity
-		  								<input type="checkbox" >
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Senator Mobile app
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Toy Store
-		  								<input type="checkbox" checked="checked">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr> 
-	    						<td> 	
-		    						<label class="select-option">LP Icons Store
-		  								<input type="checkbox" >
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Senator Store
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>						
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Book Store
-		  								<input type="checkbox" checked="checked">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr> 
-	    						<td> 	
-		    						<label class="select-option">Templates Store
-		  								<input type="checkbox" >
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Senator April Promo
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Mobile app
-		  								<input type="checkbox" checked="checked">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr> 
-	    						<td> 	
-		    						<label class="select-option">Random text
-		  								<input type="checkbox" >
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Language Learning LP
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">LP Senator free signals
-		  								<input type="checkbox" checked="checked">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>						
-						</table>
-						
-						<table class="table-column">
-							<tr><td></td></tr>						
-	    					<tr> 
-	    						<td> 	
-		    						<label class="select-option">Landing Page Money
-		  								<input type="checkbox" checked="checked">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Mobile app
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Your second site
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr> 
-	    						<td> 	
-		    						<label class="select-option">LP Your choise
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">LP Senator free signals
-		  								<input type="checkbox" checked="checked">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Your second LP
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr> 
-	    						<td> 	
-		    						<label class="select-option">LP Wallet
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">LP DE Your choise
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Landing page Money
-		  								<input type="checkbox" checked="checked">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr> 
-	    						<td> 	
-		    						<label class="select-option">E-Shop 01
-		  								<input type="checkbox" >
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Invest wisely
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">LP Your choise
-		  								<input type="checkbox" checked="checked">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr> 
-	    						<td> 	
-		    						<label class="select-option">Toy Store
-		  								<input type="checkbox" >
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Toy Store LP Sign up page
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">LP Wallet
-		  								<input type="checkbox" checked="checked">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr> 
-	    						<td> 	
-		    						<label class="select-option">Book Store
-		  								<input type="checkbox" >
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Senator Account types
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">E-Shop 01
-		  								<input type="checkbox" checked="checked">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr> 
-	    						<td> 	
-		    						<label class="select-option">Charity
-		  								<input type="checkbox" >
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Senator Mobile app
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Toy Store
-		  								<input type="checkbox" checked="checked">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr> 
-	    						<td> 	
-		    						<label class="select-option">LP Icons Store
-		  								<input type="checkbox" >
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Senator Store
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>						
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Book Store
-		  								<input type="checkbox" checked="checked">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr> 
-	    						<td> 	
-		    						<label class="select-option">Templates Store
-		  								<input type="checkbox" >
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Senator April Promo
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Mobile app
-		  								<input type="checkbox" checked="checked">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr> 
-	    						<td> 	
-		    						<label class="select-option">Random text
-		  								<input type="checkbox" >
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">Language Learning LP
-		  								<input type="checkbox">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td> 	
-		    						<label class="select-option">LP Senator free signals
-		  								<input type="checkbox" checked="checked">
-		  								<span class="checkmark"></span>
-		  								<i class="icon-show"></i>
-									</label>
-								</td>
-							</tr>					
-						</table>
+	   			<div class="line"> 
+	   				<div class="middle-line">
+		   				<div class="table-header">
+			   				<h4>Select banners</h4>
+			   				<h4>Select websites</h4>
+		   				</div>	   				
+		    			<div class="table-column base">	    							
+		    				<table class="table-column">	    			<!--table one start-->		    								
+		    					<tr> 
+		    						<td> 	
+			    						<label class="select-option">Landing Page Money
+			  								<input type="checkbox" checked="checked">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Mobile app
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Your second site
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr> 
+		    						<td> 	
+			    						<label class="select-option">LP Your choise
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">LP Senator free signals
+			  								<input type="checkbox" checked="checked">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Your second LP
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr> 
+		    						<td> 	
+			    						<label class="select-option">LP Wallet
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">LP DE Your choise
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Landing page Money
+			  								<input type="checkbox" checked="checked">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr> 
+		    						<td> 	
+			    						<label class="select-option">E-Shop 01
+			  								<input type="checkbox" >
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Invest wisely
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">LP Your choise
+			  								<input type="checkbox" checked="checked">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr> 
+		    						<td> 	
+			    						<label class="select-option">Toy Store
+			  								<input type="checkbox" >
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Toy Store LP Sign up page
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">LP Wallet
+			  								<input type="checkbox" checked="checked">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr> 
+		    						<td> 	
+			    						<label class="select-option">Book Store
+			  								<input type="checkbox" >
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Senator Account types
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">E-Shop 01
+			  								<input type="checkbox" checked="checked">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr> 
+		    						<td> 	
+			    						<label class="select-option">Charity
+			  								<input type="checkbox" >
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Senator Mobile app
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Toy Store
+			  								<input type="checkbox" checked="checked">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr> 
+		    						<td> 	
+			    						<label class="select-option">LP Icons Store
+			  								<input type="checkbox" >
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Senator Store
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>						
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Book Store
+			  								<input type="checkbox" checked="checked">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr> 
+		    						<td> 	
+			    						<label class="select-option">Templates Store
+			  								<input type="checkbox" >
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Senator April Promo
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Mobile app
+			  								<input type="checkbox" checked="checked">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr> 
+		    						<td> 	
+			    						<label class="select-option">Random text
+			  								<input type="checkbox" >
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Language Learning LP
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">LP Senator free signals
+			  								<input type="checkbox" checked="checked">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>						
+							</table>										<!--table one end-->
+							
+							<table class="table-column">					<!--table two start-->					
+		    					<tr> 
+		    						<td> 	
+			    						<label class="select-option">Landing Page Money
+			  								<input type="checkbox" checked="checked">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Mobile app
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Your second site
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr> 
+		    						<td> 	
+			    						<label class="select-option">LP Your choise
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">LP Senator free signals
+			  								<input type="checkbox" checked="checked">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Your second LP
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr> 
+		    						<td> 	
+			    						<label class="select-option">LP Wallet
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">LP DE Your choise
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Landing page Money
+			  								<input type="checkbox" checked="checked">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr> 
+		    						<td> 	
+			    						<label class="select-option">E-Shop 01
+			  								<input type="checkbox" >
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Invest wisely
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">LP Your choise
+			  								<input type="checkbox" checked="checked">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr> 
+		    						<td> 	
+			    						<label class="select-option">Toy Store
+			  								<input type="checkbox" >
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Toy Store LP Sign up page
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">LP Wallet
+			  								<input type="checkbox" checked="checked">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr> 
+		    						<td> 	
+			    						<label class="select-option">Book Store
+			  								<input type="checkbox" >
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Senator Account types
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">E-Shop 01
+			  								<input type="checkbox" checked="checked">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr> 
+		    						<td> 	
+			    						<label class="select-option">Charity
+			  								<input type="checkbox" >
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Senator Mobile app
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Toy Store
+			  								<input type="checkbox" checked="checked">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr> 
+		    						<td> 	
+			    						<label class="select-option">LP Icons Store
+			  								<input type="checkbox" >
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Senator Store
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>						
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Book Store
+			  								<input type="checkbox" checked="checked">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr> 
+		    						<td> 	
+			    						<label class="select-option">Templates Store
+			  								<input type="checkbox" >
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Senator April Promo
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Mobile app
+			  								<input type="checkbox" checked="checked">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr> 
+		    						<td> 	
+			    						<label class="select-option">Random text
+			  								<input type="checkbox" >
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">Language Learning LP
+			  								<input type="checkbox">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td> 	
+			    						<label class="select-option">LP Senator free signals
+			  								<input type="checkbox" checked="checked">
+			  								<span class="checkmark"></span>
+			  								<i class="icon-show"></i>
+										</label>
+									</td>
+								</tr>					
+							</table>										<!--table one end-->
+						</div>
 					</div>
 				</div>
 				<div class="modal-footer">
@@ -900,11 +926,7 @@
     					<button class="btn-save close">Save</button>
     				</form>
     			</div>				
-			</div>
-			<!-- end Banners -->
-
-
-
+			</div>												<!-- end Banners -->			
  		</div>
 	</section>
 	<a href="#addLinks" class="show-modal"></a>
@@ -927,7 +949,9 @@
 					Johny Bravo</a>
 				</li>				
 				<li id="quit" class="topbar-menu svg-hover">
-					<i class="sidebarIco icon-quit"></i>
+					<a href="#quit" class="show-modal">
+						<i class="sidebarIco icon-quit"></i>
+					</a>
 				</li>
 			</ul>			
 		</div>		
@@ -954,7 +978,7 @@
 					<i class="sidebarIco icon-banners"></i>
 					<a href="#">Banners</a>
 				</li>
-				<li class="sidebar-menu">
+				<li id="personal" class="sidebar-menu">
 					<i class="sidebarIco icon-personaldata"></i>
 					<a href="#">Persolanl data</a>
 				</li>
@@ -962,7 +986,7 @@
 					<i class="sidebarIco icon-payout"></i>
 					<a class="ico-hover" href="#">Payout</a>
 				</li>
-				<li class="sidebar-menu">
+				<li id="postback" class="sidebar-menu">
 					<i class="sidebarIco icon-postback"></i>
 					<a href="#">Postback</a>
 				</li>

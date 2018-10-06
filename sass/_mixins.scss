@@ -86,9 +86,27 @@
     } 
   }
 
-  i {    
+  i {
+    display: flex;
+    flex-direction: row;
+    margin: auto 0 auto auto;        
     font-size: .75em;   
     color: $links;    
     visibility: hidden;
+  }
+}
+
+@mixin input-field($prefix) {
+  input[type=text],
+  input[type=password],
+  textarea, 
+  select { 
+    padding: $prefix;   
+    margin: 8px 0;      
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: content-box;
+    background-color: $main-color;
+    color: $button-grey-active;  
   }
 }

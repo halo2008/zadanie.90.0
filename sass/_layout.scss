@@ -38,3 +38,15 @@
   box-shadow: 0 0 15px 0 rgba(0,0,0,.125);
   margin: 20px;   
 }
+
+.line {
+  border-bottom: 1px solid $disabled-buton;
+}
+
+.padding-field {
+  padding: 20px;
+}
+
+h4 {
+  font-family: $page-header-font;
+}

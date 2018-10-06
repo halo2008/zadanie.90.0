@@ -1,0 +1,51 @@
+textarea {
+	resize: none;
+	padding: 120px;
+	margin: 20px;
+}
+
+.postback-area {
+	display: flex;	
+    justify-content: space-evenly;
+    @include input-field(100px);
+}
+
+.postback-box {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	margin: 20px;
+	h4 {
+		margin: 20px 20px 20px 0;
+		text-align: left;
+	}
+}
+
+.rnd-text {
+	padding-left: 20px;
+}
+
+.postaback-select {
+	display: flex;
+	padding: 20px;
+	justify-content: space-between;
+	
+	h4 {
+		text-align: left;		
+	}
+
+	@include input-field(10px);
+	select {
+		width: 300px;
+	} 
+}
+
+.table-column-postback {
+	max-height: 200px;
+	overflow: auto;
+}
+
+.postback-table {
+	max-height: 200px;
+	overflow-y: auto;
+}

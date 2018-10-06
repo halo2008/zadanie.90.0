@@ -3,17 +3,13 @@
   top: 0;
   left: 0;
   z-index: 999;
-
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.5);
-
   justify-content: center;
   align-items: center;
-
   overflow: auto;
   padding: 30px;
-
   display: none;
 }
 
@@ -21,31 +17,16 @@
   display: flex;
 }
 
-.modal {
-  
+.modal {  
   margin: auto;
   background-color: #ffffff;
   position: relative;  
   display: none;
-	input[type=text],
-	input[type=password], 
-	select {		
-		padding: 12px 20px;
-    	margin: 8px 0;
-   	 	display: inline-block;
-   		border: 1px solid #ccc;
-    	border-radius: 5px;
-    	box-sizing: border-box;
-    	background-color: $main-color;
-    	color: $button-grey-active;
-    	width: 300px;
-	}
-	
+	@include input-field(10px);	
 	
 	.modal-header {		
 		display: flex;
-		margin: 0;		
-
+		margin: 0;
 		.lang {
 			margin-right: 0;			
 		}
@@ -69,8 +50,7 @@
 		border-bottom: 1px solid $disabled-buton;
 	}
 
-	i {
-		padding: 20px;
+	i {		
 		color: $button-grey-active;
 		cursor: pointer;
 	}
@@ -78,11 +58,6 @@
 		padding: 20px;
 	}
 }
-
-.word-spacing {
-	word-spacing: 150px;
-}
-
 
 .border-input-link {
 	width: 300px;
@@ -97,12 +72,13 @@
 
 .modal .btn-close {
   position: absolute;
+  padding: 20px;
   top: 0;
   right: 0;
 }
 
 .select-option {
-    display: block;
+   	display: flex;
     position: relative;
     padding-left: 35px;    
     cursor: pointer;
@@ -163,20 +139,59 @@
 		&:after{
 		content:"";
 	    position: absolute;	   
-	    top: 299px;
-	    height: 55%;
+	    top: 283px;
+	    height: 56%;
 	    left: 50%;
 	    border-left: 1px solid $disabled-buton;
 	    transform: translate(-50%);
 	}	
 }
 
+.form-box {
+	display: flex;
+	flex-direction: column;
+}
+
+.select-box {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	padding: 0 10px 0 10px;	
+	width: -webkit-fill-available;
+}
+
+.last-box {
+	select {		
+		width: 20%;   		
+	}	
+}
+
+.quit {
+	width: 500px;
+	.btn-quit {
+		justify-content: flex-end;
+		button {
+			width: 100px;
+			margin: 0 10px 0 10px;
+		}
+	}
+
+	.btn-copy {
+		background-color: $button-grey-inactive;
+	}
+
+}
+
+
 .table-column {
 	padding: 15px;	
 	display: flex;
 	@include table;
-	table {
-		flex-basis: 50%;
+	table {		
+		flex-basis: 49%;
+		i {
+			padding-left: 150px;
+		}
 	}	
 }
 

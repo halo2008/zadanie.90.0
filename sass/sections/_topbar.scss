@@ -36,7 +36,6 @@ ul {
 		}
 	}
 
-
 	.topbar-menu {		
 		display: inline-block;
 		display: flex;
@@ -47,16 +46,14 @@ ul {
 		height: 50px;
 
 		&:hover {
-			cursor: pointer;
-			
+			cursor: pointer;			
 		}
 	}
 }
 
 .ring {
 	cursor: pointer;   
-    position: relative;    
-      
+    position: relative;        
 	&:before {
 	    background-color: $button-orange-inactive;	    
 	    content: "";	    
@@ -66,7 +63,7 @@ ul {
 	    top: 0;
 	    height: 8px;	   
 	    border-radius: 50%;
-	}
+	}	
 	&:hover >svg {
 		fill: $button-orange-active;
 	}
