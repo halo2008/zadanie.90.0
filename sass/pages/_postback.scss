@@ -48,9 +48,9 @@ textarea {
 .postback-table {
 	padding: 15px;	
 	display: flex;
+	width: 100%;
 	@include table (100px);
 	table {		
-		flex-basis: 49%;
 		i {
 			padding-left: 150px;
 		}
@@ -58,8 +58,7 @@ textarea {
 }
 
 .slider {
-	width: 66%;
-	padding-left: 144px;
+	width: 100%;	
 }
 
 .right {
@@ -67,14 +66,104 @@ textarea {
 	padding-right: 50px;
 }
 
-.middle-line-post {		
-		&:after{
-		content:"";
-	    position: absolute;	   
-	    top: 721px;
-	    height: 199px;
-	    left: 51%;
-	    border-left: 1px solid $disabled-buton;
-	    transform: translate(-50%);
-	}	
+.postback-field {
+	display: flex;
+	justify-content: center;
 }
+
+.postback {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	h4{
+		padding: 20px;
+		margin-left: 0;		
+		span {
+			color: $brand-main-color;
+		}
+	}		
+}
+
+.slider-text {
+	display: flex;
+	width: 100%;
+    justify-content: space-between;
+}
+
+input[type="range"] { 
+    margin: auto;
+    -webkit-appearance: none;
+    position: relative;    
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0; /* iOS */
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: $disabled-buton;
+    height: 10px;
+    width: 100%;
+    background: linear-gradient(90deg, red, blue) 0 100% no-repeat content-box;
+
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  	border: none;
+ 	width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid $button-orange-inactive;
+    margin-top: 10px;
+}
+
+input[type="range"]::-moz-range-track {
+    height: 40px;
+    background: #ddd;
+}
+
+input[type="range"]::-moz-range-thumb {
+    border: none;
+ 	width: 0;
+    height: 0;    
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid $button-orange-inactive;
+    margin-top: 10px;
+}
+
+input[type="range"]::-ms-fill-lower { 
+    background: $button-orange-inactive;
+}
+
+input[type="range"]::-ms-thumb { 
+	border: none;
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 25px solid $button-orange-inactive;
+	margin-top: 10px;
+}
+
+input[type="range"]::-ms-ticks-after { 
+    display: none; 
+}
+
+input[type="range"]::-ms-ticks-before { 
+    display: none; 
+}
+
+input[type="range"]::-ms-track { 
+    background: #ddd;
+    color: transparent;
+    height: 40px;
+    border: none;
+}
+
+input[type="range"]::-ms-tooltip { 
+    display: none;
+}
+

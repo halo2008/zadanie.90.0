@@ -27,22 +27,20 @@
 	}	
 }
 
-.sortTable {
-	padding: 10px 0 10px 0;	
-
-}
-
 .thead-color {	
 	th {
 		i {
-			visibility: hidden;
+			visibility: hidden;			
+			&:hover {
+				visibility: visible;	
+			}
 		}
 		
 		&:hover {
 			cursor: pointer;			
 			border-radius: 5px;
-			background-color: $disabled-buton;
-			visibility: visible;
+			background-color: $disabled-buton;	
+			visibility: visible;		
 		}	
  	}
  	th > a {
