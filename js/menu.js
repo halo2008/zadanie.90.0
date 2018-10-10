@@ -65,40 +65,45 @@ charts();
 
 /*------------------------------Ajax------------------------------*/
 
-document.getElementById("general").addEventListener("click", function(){
+document.getElementById("general").addEventListener("click", function(event){
   loadPages(event, "general.html", charts);
 });
-document.getElementById("links").addEventListener("click", function(){
-  loadPages(event, "links.html", function(){
-    document.getElementById("addLinks").addEventListener("click", function() {
-      showModal(event);
-      document.getElementById("modalLinks").classList.add('showModal');
-    });
-  });  
-});
-
-document.getElementById("details").addEventListener("click", function() {
+  
+document.getElementById("details").addEventListener("click", function(event) {
   loadPages(event, "details.html");
 });
 
-document.getElementById("personal").addEventListener("click", function() {
+document.getElementById("personal").addEventListener("click", function(event) {
   loadPages(event, "personal.html");
 });
 
-document.getElementById("banners").addEventListener("click", function() {
+/*document.getElementById("banners").addEventListener("click", function(event) {
   loadPages(event, "banners.html", function(){
-    document.getElementById("addBanners").addEventListener("click", function(){
+    document.getElementById("addBanners").addEventListener("click", function(event){
       showModal(event);
       document.getElementById("modalBanners").classList.add('showModal');
     });
   });
+});*/
+
+document.getElementById("links").addEventListener("click", function (event){
+  loadPages(event, "links.html", function(event){
+    loadModal("addLinks","modalLinks");
+  });
 });
 
-document.getElementById("payout").addEventListener("click", function () {
+document.getElementById("banners").addEventListener("click", function (event){
+  loadPages(event, "banners.html", function(event){
+    loadModal("addBanners","modalBanners");
+  });
+});
+
+
+document.getElementById("payout").addEventListener("click", function (event) {
   loadPages(event, "payout.html");
 });
 
-document.getElementById("postback").addEventListener("click", function () {
+document.getElementById("postback").addEventListener("click", function (event) {
   loadPages(event, "postback.html");
 });
 
@@ -121,12 +126,12 @@ function loadPages (event, pages, callback) {
 }
 
 
-/*function loadModal (idButton, idModal){
-  document.getElementById(idButton).addEventListener("click", function(){
+function loadModal (idButton, idModal){
+  document.getElementById(idButton).addEventListener("click", function(event){
     showModal(event);
     document.getElementById(idModal).classList.add('showModal');
   });
-}*/
+}
 
 var showModal = function(event){
   event.preventDefault();
@@ -137,7 +142,7 @@ var modalLinks = document.querySelectorAll('.show-modal');
 
 modalLinks.forEach(function(element) {
   element.addEventListener("click", function() {
-      document.querySelector(event.target.getAttribute("href")).classList.add('showModal');
+      document.querySelector(event.currentTarget.getAttribute("href")).classList.add('showModal');
     });
 }); 
 
