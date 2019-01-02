@@ -5,9 +5,12 @@ textarea {
 }
 
 .postback-area {
-	display: flex;	
+	display: flex;
     justify-content: space-evenly;
     @include input-field(100px);
+		@media only screen and (max-width: 510px) {
+			@include input-field(2px);
+		}
 }
 
 .postback-box {
@@ -29,15 +32,19 @@ textarea {
 	display: flex;
 	padding: 20px;
 	justify-content: space-between;
-	
+
 	h4 {
-		text-align: left;		
+		text-align: left;
 	}
 
 	@include input-field(10px);
+
+	@media only screen and (max-width: 510px) {
+		@include input-field(2px);
+	}
 	select {
 		width: 300px;
-	} 
+	}
 }
 
 .table-column-postback {
@@ -46,11 +53,11 @@ textarea {
 }
 
 .postback-table {
-	padding: 15px;	
+	padding: 15px;
 	display: flex;
 	width: 100%;
 	@include table (100px);
-	table {		
+	table {
 		i {
 			padding-left: 150px;
 		}
@@ -58,7 +65,7 @@ textarea {
 }
 
 .slider {
-	width: 100%;	
+	width: 100%;
 }
 
 .right {
@@ -77,11 +84,11 @@ textarea {
 	width: 100%;
 	h4{
 		padding: 20px;
-		margin-left: 0;		
+		margin-left: 0;
 		span {
 			color: $brand-main-color;
 		}
-	}		
+	}
 }
 
 .slider-text {
@@ -89,11 +96,13 @@ textarea {
 	width: 100%;
     justify-content: space-between;
 }
-
-input[type="range"] { 
+.pos-border {
+	border-right: 1px solid $disabled-buton;
+}
+input[type="range"] {
     margin: auto;
     -webkit-appearance: none;
-    position: relative;    
+    position: relative;
     width: 100%;
     cursor: pointer;
     border-radius: 0; /* iOS */
@@ -111,7 +120,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
   	border: none;
- 	width: 0;
+ 		width: 0;
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
@@ -126,19 +135,19 @@ input[type="range"]::-moz-range-track {
 
 input[type="range"]::-moz-range-thumb {
     border: none;
- 	width: 0;
-    height: 0;    
+ 		width: 0;
+    height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     border-bottom: 25px solid $button-orange-inactive;
     margin-top: 10px;
 }
 
-input[type="range"]::-ms-fill-lower { 
+input[type="range"]::-ms-fill-lower {
     background: $button-orange-inactive;
 }
 
-input[type="range"]::-ms-thumb { 
+input[type="range"]::-ms-thumb {
 	border: none;
 	width: 0;
 	height: 0;
@@ -148,22 +157,40 @@ input[type="range"]::-ms-thumb {
 	margin-top: 10px;
 }
 
-input[type="range"]::-ms-ticks-after { 
-    display: none; 
+input[type="range"]::-ms-ticks-after {
+  display: none;
 }
 
-input[type="range"]::-ms-ticks-before { 
-    display: none; 
+input[type="range"]::-ms-ticks-before {
+  display: none;
 }
 
-input[type="range"]::-ms-track { 
-    background: #ddd;
-    color: transparent;
-    height: 40px;
-    border: none;
+input[type="range"]::-ms-track {
+  background: #ddd;
+  color: transparent;
+  height: 40px;
+  border: none;
 }
 
-input[type="range"]::-ms-tooltip { 
+input[type="range"]::-ms-tooltip {
     display: none;
 }
+@media only screen and (max-width: 998px) {
+	.postback-area,
+	.postaback-select,
+	.postback-field {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.pos-border,
+	.postback-field {
+		border: none;
+	}
 
+	.pos-bor {
+		padding-bottom: 15px;
+		border-top: 1px solid $disabled-buton;
+		border-bottom: 1px solid $disabled-buton;
+	}
+}

@@ -29,10 +29,10 @@
 	color:  $button-grey-inactive;
 }
 
-@mixin line { 
+@mixin line {
   display: flex;
-  justify-content: center; 
-  margin: 0 auto;  
+  justify-content: center;
+  margin: 0 auto;
   padding-bottom: 20px;
   border-bottom: 1px solid $disabled-buton;
 }
@@ -40,7 +40,7 @@
 @mixin button {
   background-color: $button-orange-inactive;
   border-style: none;
-  border-radius: 5px; 
+  border-radius: 5px;
   &:hover {
     background-color: $button-orange-active;
     cursor: pointer;
@@ -57,41 +57,40 @@
 @mixin table-layout($prefix) {
   text-align: $prefix;
   margin: 0 auto;
-  border-collapse: collapse;  
+  border-collapse: collapse;
 }
 
 @mixin table($prefix) {
   table {
     max-height: $prefix;
-    overflow: auto;   
+    overflow: auto;
   }
 
   h4 {
     padding-bottom: 40px;
     text-align: left;
   }
-  td {      
+  td {
     padding: 5px;
     font-size: 12px;
     font-family: $page-header-font;
     font-weight: lighter;
-    
-    justify-content: spacebetween;    
-    
+    justify-content: spacebetween;
+
     &:hover {
       background-color: $disabled-buton;
-      i { 
+      i {
         visibility: visible;
       }
-    } 
+    }
   }
 
   i {
     display: flex;
     flex-direction: row;
-    margin: auto 0 auto auto;        
-    font-size: .75em;   
-    color: $links;    
+    margin: auto 0 auto auto;
+    font-size: .75em;
+    color: $links;
     visibility: hidden;
   }
 }
@@ -99,14 +98,14 @@
 @mixin input-field($prefix) {
   input[type=text],
   input[type=password],
-  textarea, 
-  select { 
-    padding: $prefix;   
-    margin: 8px 0;      
+  textarea,
+  select {
+    padding: $prefix;
+    margin: 8px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: content-box;
     background-color: $main-color;
-    color: $button-grey-active;  
+    color: $button-grey-active;    
   }
 }

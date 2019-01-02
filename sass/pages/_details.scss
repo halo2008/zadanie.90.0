@@ -4,10 +4,11 @@
 	padding: 20px;
 }
 
-.scroll-table {	
+.scroll-table {
+		height: auto;
   	width: 100%;
   	overflow-x: auto;
-	@include table-layout(center);	
+	@include table-layout(center);
 }
 
 .table-container {
@@ -18,34 +19,36 @@
 	tr {
 
 		td {
+
 			@include table-td(140px);
+			padding: 10px;
 		}
 		&:hover  {
 			background-color: $disabled-buton;
 			cursor: pointer;
 		}
-	}	
+	}
 }
 
-.thead-color {	
+.thead-color {
 	th {
 		i {
-			visibility: hidden;				
+			visibility: hidden;
 		}
-		
+
 		&:hover {
-			cursor: pointer;			
+			cursor: pointer;
 			border-radius: 5px;
-			background-color: $disabled-buton;	
+			background-color: $disabled-buton;
 			i {
 				visibility: visible;
-			}		
-		}	
+			}
+		}
  	}
  	th > a {
  		font-size: 12px;
 		color: $button-grey-inactive;
-		font-family: $page-header-font;	}		
+		font-family: $page-header-font;	}
 }
 
 .page-number{
@@ -55,11 +58,11 @@
 		font-family: $page-header-font;
 		&:hover {
 			cursor: pointer;
-			color: $button-orange-active;	
+			color: $button-orange-active;
 		}
 	}
 	i {
 		padding: 10px;
-		cursor: pointer;		
+		cursor: pointer;
 	}
 }

@@ -3,7 +3,7 @@
 	max-width: 400px;
 }
 
-.personal-field {	
+.personal-field {
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
@@ -16,11 +16,19 @@
 		width: 200px;
 	}
 		@include input-field(10px);
+		@media only screen and (max-width: 510px) {
+			@include input-field(2px);
+		}
 }
-
+	@media only screen and (max-width: 340px) {
+		.personal-field {
+			input {
+				width: 100px;
+			}
+		}
+	}
 
 
 .field {
 	width: 300px;
 }
-

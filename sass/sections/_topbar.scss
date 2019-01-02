@@ -10,9 +10,10 @@
 
 	.arrow-down {
 		cursor: pointer;
-		padding: 4px;		
+		padding: 4px;
 	}
 }
+
 .svg-hover {
 		&:hover > svg {
 			cursor: pointer;
@@ -36,35 +37,57 @@ ul {
 		}
 	}
 
-	.topbar-menu {		
+	.topbar-menu {
 		display: inline-block;
 		display: flex;
-    	justify-content: center;
+    justify-content: center;
 		list-style-type: none;
 		border-left: 1px solid $disabled-buton;
 		padding: 13px;
 		height: 50px;
 
 		&:hover {
-			cursor: pointer;			
+			cursor: pointer;
 		}
 	}
 }
 
 .ring {
-	cursor: pointer;   
-    position: relative;        
+	cursor: pointer;
+    position: relative;
 	&:before {
-	    background-color: $button-orange-inactive;	    
-	    content: "";	    
+	    background-color: $button-orange-inactive;
+	    content: "";
 	    width: 8px;
 	    position: absolute;
 	    right: 0;
 	    top: 0;
-	    height: 8px;	   
+	    height: 8px;
 	    border-radius: 50%;
-	}	
+	}
 	&:hover >svg {
 		fill: $button-orange-active;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.topbar{
+		height: 30px;
+		top: 38px;
+		display: flex;
+		flex: wrap;
+		justify-content: center;
+	}
+	ul {
+		h4 {
+			padding: 0 2px 0 2px;
+		}
+		a {
+			padding-left: 2px;
+		}
+		.topbar-menu {
+			padding: 5px;
+			height: 30px;
+		}
 	}
 }

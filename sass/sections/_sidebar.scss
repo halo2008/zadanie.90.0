@@ -1,16 +1,16 @@
-.sidebar {	
+.sidebar {
 	margin: 0 auto;
-	background-color: $paragraph-alternative-color;	
+	background-color: $paragraph-alternative-color;
 	width: 200px;
 	position: fixed;
 	height: 100vh;
 	transition: all .5s;
 	top: 0;
-	left: 0;	
+	left: 0;
 }
 
 .logo {
-	padding: 0px;	
+	padding: 0px;
 
 	img {
 		padding: 10px;
@@ -22,25 +22,24 @@ a {
 }
 
 ul {
-	padding: 0;			
-	
-	.sidebar-menu {		
-		list-style-type: none;		
-		padding: 15px;
-		border-left: 3px solid $paragraph-alternative-color;
+	padding: 0;
+
+	.sidebar-menu {
+		list-style-type: none;
+		padding: 15px;		
 		display: flex;
-		justify-content: start;		
-		a {	
+		justify-content: start;
+		a {
 			margin-left: 10px;
-			@include paragraph;								
-		}				
-	
+			@include paragraph;
+		}
+
 		&:hover {
 			background-color: rgba(100,100,100,.5);
 			cursor: pointer;
-			border-left: 3px solid $button-orange-inactive;			
+			border-left: 3px solid $button-orange-inactive;
 		}
-		
+
 		&:hover > a{
 			color: $main-color;
 		}
@@ -48,7 +47,6 @@ ul {
 		&:hover > .sidebarIco {
 			color: $main-color;
 		}
-
 	}
 }
 
@@ -62,8 +60,16 @@ hr {
 	border: .5px solid $button-grey-inactive;
 }
 
-.show {
+.hide {
 	transform: translateX(-400px);
+}
+
+.hideY {
+	transform: translateY(-630px);
+}
+
+.flex {
+  margin-left: 0px;
 }
 
 .hamburger {
@@ -71,8 +77,12 @@ hr {
 	transition: all .5s;
 }
 
-.one {
+.hamburgerX {
 	transform: translateX(270px);
+}
+
+.hamburgerY {
+	transform: translateY(625px);
 }
 
 h4 {
@@ -85,7 +95,13 @@ h4 {
 .users {
 	padding: 20px;
 	display: flex;
-	align-items: center;    
+	align-items: center;
+}
+.active {
+		background-color: rgba(100,100,100,.5);
+		cursor: pointer;
+		border-left: 3px solid $button-orange-inactive;
+		color: $main-color;
 }
 
 .users  a {
@@ -96,18 +112,45 @@ h4 {
 	}
 }
 
-.photo_users {	
+.photo_users {
     height: 43px;
     position: relative;
-    width: 43px;   
+    width: 43px;
 	&:before {
-	    background-color: $brand-main-color;	    
-	    content: "";	    
+	    background-color: $brand-main-color;
+	    content: "";
 	    height: 12px;
 	    position: absolute;
 	    right: 0;
 	    top: 0;
 	    width: 12px;
 	    border-radius: 50%;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.sidebar {
+		width: 100%;
+
+		.logo {
+			display: flex;
+			justify-content: space-around;
+		}
+
+		ul {
+
+			margin: 0 auto;
+			.sidebar-menu {
+				justify-content: space-between;
+				max-width: 80%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		.users {
+			display: flex;
+			justify-content: center;
+		}
 	}
 }

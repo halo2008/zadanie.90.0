@@ -17,26 +17,26 @@
   display: flex;
 }
 
-.modal {  
+.modal {
   margin: auto;
   background-color: #ffffff;
-  position: relative;  
+  position: relative;
   display: none;
-	@include input-field(10px);	
-	
-	.modal-header {		
+	@include input-field(10px);
+
+	.modal-header {
 		display: flex;
 		margin: 0;
 		.lang {
-			margin-right: 0;			
+			margin-right: 0;
 		}
 	}
 
-	h4 {		
+	h4 {
 		display: inline;
 		padding: 0;
 		margin-left: 0;
-		font-family: $page-header-font;		
+		font-family: $page-header-font;
 	}
 
 	h3 {
@@ -50,7 +50,7 @@
 		border-bottom: 1px solid $disabled-buton;
 	}
 
-	i {		
+	i {
 		color: $button-grey-active;
 		cursor: pointer;
 	}
@@ -61,6 +61,7 @@
 
 .border-input-link {
 	width: 300px;
+  margin: 5px;
 	border: 1px solid black;
 }
 
@@ -80,7 +81,7 @@
 .select-option {
    	display: flex;
     position: relative;
-    padding-left: 35px;    
+    padding-left: 35px;
     cursor: pointer;
     font-size: 16px;
     -webkit-user-select: none;
@@ -95,7 +96,7 @@
     }
 
     &:hover input ~ .checkmark {
-    	
+
 	}
 
 	input:checked ~ .checkmark {
@@ -133,18 +134,18 @@
 	    position: absolute;
 	    display: none;
 	}
-}	
+}
 
-.middle-line {		
+.middle-line {
 		&:after{
 		content:"";
-	    position: absolute;	   
+	    position: absolute;
 	    top: 292px;
 	    height: 489px;
 	    left: 50%;
 	    border-left: 1px solid $disabled-buton;
 	    transform: translate(-50%);
-	}	
+	}
 }
 
 .form-box {
@@ -156,14 +157,14 @@
 	margin: auto;
 	display: flex;
 	flex-direction: column;
-	padding: 0 10px 0 10px;	
+	padding: 0 10px 0 10px;
 	width: -webkit-fill-available;
 }
 
 .last-box {
-	select {		
-		width: 20%;   		
-	}	
+	select {
+		width: 20%;
+	}
 }
 
 .quit {
@@ -184,15 +185,15 @@
 
 
 .table-column {
-	padding: 15px;	
+	padding: 15px;
 	display: flex;
 	@include table (400px);
-	table {		
+	table {
 		flex-basis: 49%;
 		i {
 			padding-left: 150px;
 		}
-	}	
+	}
 }
 
 .base {
@@ -208,7 +209,7 @@
 	display: flex;
 	padding: 20px;
 	flex-basis: 100%;
-  	flex-wrap: wrap;    
+  	flex-wrap: wrap;
 	overflow-y: auto;
 	@include table (250px);
 	table {
@@ -218,7 +219,7 @@
 
 .btn-copy {
 	font-family: $brand-font;
-	font-weight: lighter;	
+	font-weight: lighter;
 	width: 160px;
 	height: 44px;
 	color: $main-color;
@@ -244,7 +245,7 @@
 		}
 	}
 }
-	
+
 ::-webkit-scrollbar {
     width: 10px;
     margin: 65px;
@@ -252,15 +253,15 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: #f1f1f1;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #555;
 }

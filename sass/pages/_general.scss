@@ -1,5 +1,5 @@
-.general-border > h3 {
-	padding: 15px;	
+.general-bor	34,425.00	cpl(200)der > h3 {
+	padding: 15px;
 	text-transform: uppercase;
 	border-bottom: 1px solid $disabled-buton;
 	font-family: $page-header-font;
@@ -14,54 +14,64 @@
 	margin: 0 auto;
 	width: 40%;
 	padding: 20px;
-
 }
 
 .content-info {
 	align-items: center;
-    border-bottom: 1px solid #e3e3e3;   
-    display: flex;
-    height: 40px;
-    justify-content: space-between;
-    margin: 0 14px 14px;
-    width: 300px;
+  border-bottom: 1px solid #e3e3e3;
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  margin: 0 14px 14px;
+  width: 300px;
 }
 
-.general-info {		
+.general-info {
 	display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-bottom: 42px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 42px;
+
 	span {
 		font-family: $page-header-font;
 		color: $button-grey-active;
 		display: block;
-		
 	}
 }
 
 .calendar {
 	@include line;
-	margin: 0 auto;	
-	
+	margin: 0 auto;
+
 	button {
-		margin: 10px 0 0 25px;	
-	}	
-	
+		margin: 10px 0 0 25px;
+	}
 }
 
 .border-input {
 	width: 410px;
 	border: 1px solid $disabled-buton;
-	border-radius: 2%;	
+	border-radius: 2%;
 }
-
-
 
 .set-date > input {
 	border-style: none;
 	padding: 15px;
 	list-style-type: none;
+}
+
+@media only screen and (max-width: 510px) {
+	.border-input {
+		width: 200px;
+	}
+	.icon-calendar {
+		display: none;
+	}
+
+	.set-date > input {
+			display: flex;
+			flex-wrap: wrap;
+	}
 }
 
 .refresh {
@@ -72,7 +82,7 @@
 	.icon-refresh {
 		color: $main-color;
 	}
-	
+
 }
 
 .end {

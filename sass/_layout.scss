@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
 .container {
   width: 100%;
   max-width: 1170px;
@@ -21,22 +30,39 @@
   flex-wrap: wrap;
 }
 
-.flex {
+.content {
+  background-color: #f5f5f5;
+  display: flex;
+  margin-top: 50px;
+  min-height: calc(100vh - 50px);
+  transition: all .4s;
   margin-left: 200px;
 }
 
-.content {
-  background-color: #f5f5f5;
-  display: flex;    
-  margin-top: 50px;
-  min-height: calc(100vh - 50px);
-  transition: all .4s; 
+@media only screen and (max-width: 768px) {
+  .content {
+    margin: 0 auto;
+    width: 100%;
+    .general-border {
+      margin: 0;
+      margin-top: 50px;
+      width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 480px) {
+ .page-number {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+ }
 }
 
-.general-border { 
+.general-border {
   background-color: #fff;
   box-shadow: 0 0 15px 0 rgba(0,0,0,.125);
-  margin: 20px;   
+  margin: 20px;
+  width: 100%;
 }
 
 .line {

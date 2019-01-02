@@ -1,6 +1,6 @@
 .links {
 	@include line;
-	border-bottom: none;	
+	border-bottom: none;
 }
 
 .add-new {
@@ -10,10 +10,11 @@
 	width: 120px;
 	height: 40px;
 	color: $main-color;
-	@include button;	
+	@include button;
 }
 
-.space > h3 {	
+.space > h3 {
+	padding: 0 5px;	
 	margin: 0;
 	font-size: 1em;
 	color: $button-grey-inactive;
@@ -54,20 +55,15 @@
 	color:$links;
 }
 
-.icons {		
-	text-align: right;	
+.icons {
+	text-align: right;
 }
 
 .under {
 	padding-top: 20px;
 }
 
-[class*=icon-hide] {	
+[class*=icon-hide] {
 	padding-right: 10px;
-	visibility: hidden;	
+	visibility: hidden;
 }
-
-
-
-
-
